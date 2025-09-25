@@ -1,0 +1,4 @@
+# profile: base
+apt:
+  packages:
+    present: [git, curl, htop]

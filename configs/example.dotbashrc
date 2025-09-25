@@ -1,0 +1,2 @@
+# Example .bashrc snippet added by rpios-setup
+alias ll='ls -alF'

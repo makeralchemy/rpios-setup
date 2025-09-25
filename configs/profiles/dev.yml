@@ -1,0 +1,6 @@
+# profile: dev
+apt:
+  packages:
+    present: [git, curl, vim, python3-pip]
+piapps:
+  apps: ["VS Code"]

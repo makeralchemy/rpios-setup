@@ -1,0 +1,46 @@
+
+# Sample rpios-setup configuration
+
+hostname: "sample-pi"
+timezone: "America/Los_Angeles"
+locale: "en_US.UTF-8"
+keyboard_layout: "us"
+gpu_mem: 128
+
+services:
+  enable: [ssh, avahi-daemon]
+  disable: []
+
+apt:
+  update: true
+  upgrade: false
+  packages:
+    present:
+      - git
+      - curl
+      - htop
+      - vim
+      - ffmpeg
+      - python3-pip
+    absent: []
+
+piapps:
+  ensure_installed: true
+  apps:
+    - "VS Code"
+    - "Audacity"
+
+desktop:
+  wallpaper_asset:
+    src: "assets/my-favorite.jpg"
+    name: "my-favorite.jpg"
+
+# VS Code extensions (optional)
+vscode:
+  extensions:
+    present:
+      - ms-python.python
+      - ms-toolsai.jupyter
+      - ms-vscode.cpptools
+    absent: []
+

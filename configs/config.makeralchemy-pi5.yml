@@ -1,0 +1,71 @@
+
+# Makeralchemy Raspberry Pi 5 rpios-setup configuration
+
+hostname: "makeralchemy-pi5"
+timezone: "America/Los_Angeles"
+locale: "en_US.UTF-8"
+keyboard_layout: "us"
+gpu_mem: 128
+
+services:
+  enable: [ssh, vnc, avahi-daemon]
+  disable: []
+
+apt:
+  update: true
+  upgrade: false
+  packages:
+    present:
+      - arduino
+      - code
+      - curl
+      - imagemagick
+      - lynx
+      - minicom
+      - mu
+      - postgresql
+      - python3-pip
+      - rclone
+      - ruby
+      - vim
+    absent: []
+
+piapps:
+  ensure_installed: true
+  apps:
+    - "Audacious"
+    - "Audacity"
+    - "Chromium"
+    - "CloudBuddy"
+    - "Disk Usage Analyzer"
+    - "Filezilla"
+    - "Firefox Rapid Release"
+    - "Flameshot"
+    - "GIMP"
+    - "Github-CLI"
+    - "Github Desktop"
+    - "Https File Server"
+    - "Imager"
+    - "Inkscape"
+    - "Microsoft PowerShell"
+    - "Node.js"
+    - "OpenSCAD"
+    - "SpeedTest-CLI"
+    - "Sublime Text"
+    - "Thonny"
+    - "YouTubuddy"
+
+desktop:
+  wallpaper_asset:
+    src: "assets/pi-wallpaper-1.jpg"
+    name: "pi-wallpaper-1.jpg"
+
+# VS Code extensions (optional)
+vscode:
+  extensions:
+    present:
+      - ms-python.python
+      - ms-toolsai.jupyter
+      - ms-vscode.cpptools
+    absent: []
+
