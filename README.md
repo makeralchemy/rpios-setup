@@ -14,6 +14,7 @@ Installs apt packages, Pi-Apps, sets desktop prefs (LXQt), manages services, wal
 
 ```bash
 # 1. Clone or unpack the repo
+git clone https://github.com/makeralchemy/rpios-setup.git
 cd rpios-setup
 
 # 2. Create and activate a virtual environment
